@@ -4,6 +4,7 @@ import { InstitucionesService } from '../services/instituciones.service';
 import { ItemsService} from '../services/items.service';
 import { TdLoadingService } from '@covalent/core';
 import { Router } from '@angular/router';
+import {empty} from "rxjs/Observer";
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -50,12 +51,13 @@ export class PerfilComponent implements OnInit {
   //Chips
   readOnly: boolean = false;
   topics: string[] =[
-    '',
+    'estilo-de-vida',
    ];
   itemsRequireMatch: string[] = this.topics.slice(0, 6);
   private putalife: any;
 
   showChips(){
+    console.log('¿¡compile?!');
     console.log(this.topics);
     console.log(this.itemsRequireMatch);
   }
@@ -66,17 +68,19 @@ export class PerfilComponent implements OnInit {
     this.user = this.user[0];
     console.log(this.user);
     if(this.user){
-      console.log("entro?");
+      console.log("siuser");
       this.itemsRequireMatch= this.user.topicos.split(" ");
+    }else{
+      console.log("nouser");
     }
-    console.log("noentro?");
   }
+ v
   getInsti(algo: any): void{
     this.institutions = algo;
     console.log(this.institutions);
   }
-  getTopic(topics: any):void{
 
+  getTopic(lol:any ,topics: any):void{
   }
   ngOnInit(){
     //INSTITUTIONS

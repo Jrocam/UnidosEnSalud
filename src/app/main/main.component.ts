@@ -20,6 +20,7 @@ export class MainComponent implements OnInit {
   }
   userEmail:string;
   logged: any;
+
   ngOnInit(){
     let local = localStorage.getItem('currentUser');
     let ar = local.split('"',4);
@@ -48,19 +49,14 @@ export class MainComponent implements OnInit {
     }
   }
   openConfirm(): void {
-    this._dialogService.openConfirm({
-      message: 'Nos dimos cuenta de que todavía no has llenado tu perfil. Deseas hacerlo ahora?',
+    this._dialogService.openAlert({
+      message: 'Todavía no has llenado tu perfil. Deberás llenarlo para poder continuar usando la plataforma',
       disableClose: true, // defaults to false
       viewContainerRef: this._viewContainerRef, //OPTIONAL
-      title: 'Hola! Te damos la bienvenida', //OPTIONAL, hides if not provided
-      acceptButton: 'Claro!', //OPTIONAL, defaults to 'ACCEPT'
-      cancelButton: 'ahora no', //OPTIONAL, defaults to 'CANCEL'
-    }).afterClosed().subscribe((accept: boolean) => {
-      if (accept) {
-        this._router.navigate(['/perfil']);
-      } else {
-        this.logout();
-      }
+      title: '¡Hola '+this.userEmail+'!', //OPTIONAL, hides if not provided
+      closeButton:'¡Claro!'
+    }).afterClosed().subscribe(() => {
+      this._router.navigate(['perfil']);
     });
   }
   routes: Object[] = [{

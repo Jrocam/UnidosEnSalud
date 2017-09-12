@@ -119,11 +119,12 @@
             <h4>Mis intereses</h4>
             <md-divider></md-divider>
             <div layout="row" class="push-top">
-              <td-chips *ngIf="topics" flex="100" [items]="topics"
+              <td-chips flex="100" [items]="topics"
                         [readOnly]="readOnly"
                         [(ngModel)]="itemsRequireMatch"
-                        placeholder="añadir tópico"
+                        placeholder="...elegir interés"
                         requireMatch
+                        (inputChange)="filterObjects($event)"
                         [ngModelOptions]="{standalone: true}">
               </td-chips>
             </div>
