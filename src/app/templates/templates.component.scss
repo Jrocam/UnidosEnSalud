@@ -35,15 +35,20 @@ a:active {
   background-image: url("../../assets/img/salud02.jpg");
   background-size: cover;
 }
+.contain{
+  display: table;
+}
 .sliding-u-l-r-l {
-  display: inline-block;
+  display:inline-block;
   position: relative;
-  padding-top: 3px;
+  padding-top: 11px;
   padding-bottom: 3px;
   font-family: 'Jura', sans-serif;
   font-weight: bold;
   font-size: 18px;
   letter-spacing: 0.2em;
+  
+  white-space: nowrap;
 }
 .sliding-u-l-r-l:before {
   content: '';

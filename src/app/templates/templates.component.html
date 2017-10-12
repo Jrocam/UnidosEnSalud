@@ -1,10 +1,12 @@
 <td-layout-nav class="white-orange">
-  <div td-toolbar-content layout="row" layout-align="center">
-    <div>
+  <div td-toolbar-content layout="row" layout-align="center" flex >
+    <span flex ></span>
+
     <a [routerLink]="['/home']"> <span class="sliding-u-l-r-l"> GENERACIÓN VIDA NUEVA</span> </a>
-    </div>
     <!-- <img src="../../assets/icons/logoColor.svg" class="wat">
     <span hide-xs>GENERACIÓN VIDA NUEVA</span>-->
+
+    <span flex ></span>
     <a md-icon-button mdTooltip="Interactúa" [routerLink]="['/interacciones']" ><md-icon>share</md-icon></a>
     <a md-icon-button mdTooltip="Correos" [routerLink]="['/home/email']">
       <td-notification-count color="accent" [notifications]="4">
