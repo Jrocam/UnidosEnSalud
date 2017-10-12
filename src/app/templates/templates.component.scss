@@ -1,3 +1,29 @@
+a{
+  position: relative;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+.containers{
+  height: inherit;
+}
 .wat{
   width: 200px;
 }
@@ -8,4 +34,69 @@
 .bg-contact{
   background-image: url("../../assets/img/salud02.jpg");
   background-size: cover;
+}
+.sliding-u-l-r-l {
+  display: inline-block;
+  position: relative;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+}
+.sliding-u-l-r-l:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  transition: width 0s ease, background .5s ease;
+}
+.sliding-u-l-r-l:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #039BE5;
+  transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:before {
+  width: 100%;
+  background: #039BE5;
+  transition: width .5s ease;
+
+}
+.sliding-u-l-r-l:hover:after {
+  width: 100%;
+  background: transparent;
+  transition: all 0s ease;
+}
+
+.crossed {
+  color: black;
+  position: relative;
+  text-decoration: none;
+}
+.crossed:before {
+
+  background-color: black;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  transition: width 1s;
+  width: 100%;
+
+}
+.crossed:hover:before {
+  width: 0;
 }

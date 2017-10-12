@@ -1,10 +1,10 @@
-
 <td-layout-nav class="white-orange">
-  <div td-toolbar-content layout="row" layout-align="start center" flex>
-    <!--<img src="../../assets/icons/logoColor.svg" class="wat">-->
-
-    <span hide-xs>GENERACIÓN VIDA NUEVA</span>
-    <span flex ></span>
+  <div td-toolbar-content layout="row" layout-align="center">
+    <div>
+    <a [routerLink]="['/home']"> <span class="sliding-u-l-r-l"> GENERACIÓN VIDA NUEVA</span> </a>
+    </div>
+    <!-- <img src="../../assets/icons/logoColor.svg" class="wat">
+    <span hide-xs>GENERACIÓN VIDA NUEVA</span>-->
     <a md-icon-button mdTooltip="Interactúa" [routerLink]="['/interacciones']" ><md-icon>share</md-icon></a>
     <a md-icon-button mdTooltip="Correos" [routerLink]="['/home/email']">
       <td-notification-count color="accent" [notifications]="4">
@@ -12,28 +12,31 @@
       </td-notification-count>
     </a>
     <a md-icon-button mdTooltip="Perfil" [routerLink]="['/perfil']" ><md-icon>account_box</md-icon></a>
+
   </div>
-  <md-toolbar color="primary" class="pad-none pull-top">
-    <nav md-tab-nav-bar class="pull-bottom">
-      <a md-tab-link
-        [routerLink]="['/home']"
-        class="active">
-        Inicio
-      </a>
-      <a md-tab-link
-        [routerLink]="['/interacciones']">
-        Interacciones
-      </a>
-      <a md-tab-link
-        [routerLink]="['/home/email']">
-        Comunicación
-      </a>
-      <!--<a md-tab-link-->
+  <!--
+   <md-toolbar color="primary" class="pad-none pull-top">
+     <nav md-tab-nav-bar class="pull-bottom">
+       <a md-tab-link
+         [routerLink]="['/home']"
+         class="active">
+         Inicio
+       </a>
+       <a md-tab-link
+         [routerLink]="['/interacciones']">
+         Interacciones
+       </a>
+       <a md-tab-link
+         [routerLink]="['/home/email']">
+         Comunicación
+       </a>
+       <!--<a md-tab-link-->
          <!--[routerLink]="['']">-->
         <!--About us-->
-      <!--</a>-->
+      <!--</a>
     </nav>
-  </md-toolbar>
+  </md-toolbar>-->
+
   <section class="bgc-blue-50">
     <div layout-gt-xs="row">
       <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
@@ -97,7 +100,6 @@
     <div layout-gt-xs="row" layout-align-gt-xs="center center">
       <div layout-gt-sm="row" flex-gt-xs="75" layout-margin layout-padding>
         <md-icon push-right-xl svgIcon="assets:logo" class="md-icon-logo"></md-icon>
-
         <p class="text-sm" flex>&copy; Copyright 2017 UnderpreassureApps, Inc. All rights reserved.</p>
       </div>
     </div>

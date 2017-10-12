@@ -2,7 +2,7 @@ import { NgModule, Type } from '@angular/core';
 import { BrowserModule, Title }  from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CovalentCoreModule } from '@covalent/core';
-import { CovalentHttpModule, IHttpInterceptor } from '@covalent/http';
+import { CovalentHttpModule } from '@covalent/http';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { AppComponent } from './app.component';
@@ -26,7 +26,7 @@ import { EditorTemplateComponent } from './templates/editor/editor.component';
 import { appRoutes, appRoutingProviders } from './app.routes';
 import { RequestInterceptor } from '../config/interceptors/request.interceptor';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-//JUAN
+//IMPORTED BY ME
 import { InstitucionesService } from './services/instituciones.service';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthenticationService } from './services/authentication.service';

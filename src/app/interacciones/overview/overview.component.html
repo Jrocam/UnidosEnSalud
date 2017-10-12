@@ -1,4 +1,4 @@
-<div class="md-content" class="inset">
+<div class="md-content inset">
   <div layout-gt-sm="row">
     <div flex-gt-sm="50">
       <md-card>
@@ -29,7 +29,7 @@
       </md-card>
     </div>
     <div flex-gt-sm="50">
-      <md-card>
+      <md-card class="cardID">
         <md-card-title>Profesionales</md-card-title>
         <md-card-subtitle>a los que les interesa este tópico</md-card-subtitle>
         <td-search-box class="push-left push-right" placeholder="busqueda" [alwaysVisible]="true" (searchDebounce)="filteredUsers($event)"></td-search-box>
@@ -41,11 +41,10 @@
           <ng-template tdLoading="users.load">
             <ng-template let-user let-last="last" ngFor [ngForOf]="filterUsers">
               <md-list-item layout-align="row">
-                <md-icon   md-list-icon>account_box</md-icon>
+                <md-icon  md-list-icon>account_box</md-icon>
                 <h3 md-line > {{user.displayName}} </h3>
                 <p md-line> {{user.institution}} </p>
                 <span flex></span>
-
                 <button md-icon-button mdTooltip="perfil" class="margen" [routerLink]="['../users',user.id]" ><md-icon color="primary">account_circle</md-icon></button>
                 <button *ngIf="user.email !== userEmail" md-icon-button mdTooltip="mensaje" class="margen"><md-icon color="primary">drafts</md-icon></button>
                 <!--<button *ngIf="user.email !== userEmail" md-icon-button mdTooltip="externo" class="margen"><md-icon color="primary">send</md-icon></button>-->
